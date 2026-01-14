@@ -10,6 +10,8 @@ body {
   min-height: 100vh;
   overflow: hidden;
   padding-bottom: 2em;
+
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -31,8 +33,9 @@ header {
 }
 
 form {
-  overflow: auto;
-  height: 45em;
+  display: flex;
+  flex-direction: column;
+  height: 40em;
   border: 1px solid red;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.17);
@@ -42,4 +45,78 @@ form {
   -webkit-backdrop-filter: blur(4.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 1.5em;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #ffffffac;
+
+  padding-block: 1em;
+}
+
+.flex-1 {
+  flex: 1;
+}
+.m-b {
+  margin-bottom: 1em;
+}
+
+label + input {
+  margin-left: 0.5em;
+}
+
+label {
+  font-size: 1em;
+  font-weight: bold;
+  color: #ffffffbf;
+  display: inline-block;
+  padding-left: 0.4em;
+  padding-bottom: 0.4em;
+  width: 100%;
+}
+
+input {
+  height: 3em;
+  border: 1px solid #ffffff3e;
+  border-radius: 0.3em;
+  background-color: transparent;
+  padding-inline: 0.7em;
+  width: 90%;
+  color: white;
+  font-size: 1em;
+}
+
+input:focus {
+  outline: 1px solid #f9912f;
+  border: none;
+}
+
+.input-wrapper + .input-wrapper {
+  margin-bottom: 1em;
+}
+
+input[type="submit"] {
+  background-color: #f9912f;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.submit-wrapper {
+  text-align: center;
+  margin-top: auto;
+}
+input[type="submit"]:hover {
+  background-color: #e8801e;
 }
