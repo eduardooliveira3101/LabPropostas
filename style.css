@@ -15,10 +15,9 @@ body {
 }
 
 .container {
-  max-width: 40em;
+  max-width: 35em;
   margin: 1em auto;
 
-  height: 50em;
   padding: 1.5em;
 }
 
@@ -37,8 +36,6 @@ form {
   flex-direction: column;
   height: 40em;
   border: 1px solid red;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.17);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4.5px);
@@ -56,13 +53,13 @@ legend {
   font-size: 2em;
   font-weight: bold;
   color: #ffffffac;
-
-  padding-block: 1em;
+  padding-bottom: 0.8em;
 }
 
 .flex-1 {
   flex: 1;
 }
+
 .m-b {
   margin-bottom: 1em;
 }
@@ -76,9 +73,9 @@ label {
   font-weight: bold;
   color: #ffffffbf;
   display: inline-block;
-  padding-left: 0.4em;
   padding-bottom: 0.4em;
   width: 100%;
+  padding-left: 0.4em;
 }
 
 input {
@@ -102,21 +99,17 @@ input:focus {
 }
 
 input[type="submit"] {
-  background-color: #f9912f;
+  background-color: #ee7e14;
   border: none;
   color: white;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 50%;
-  margin: 0 auto;
+  margin-left: 0.4em;
+  margin-top: 1em;
 }
 
-.submit-wrapper {
-  text-align: center;
-  margin-top: auto;
-}
 input[type="submit"]:hover {
-  background-color: #e8801e;
+  background-color: #f28c2c;
 }
