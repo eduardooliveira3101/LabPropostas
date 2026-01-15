@@ -23,29 +23,59 @@
         <fieldset>
           <legend>Solicite sua proposta</legend>
 
-          <div class="input-wrapper m-b">
-            <label for="enterprise">Empresa:</label>
-            <input required type="text" id="enterprise" name="enterprise" />
+          <div class="wrapper">
+            <div class="input-wrapper m-b flex-1">
+              <label for="enterprise">Empresa</label>
+              <input
+                placeholder="Digite o nome de sua empresa"
+                required
+                type="text"
+                id="enterprise"
+                name="enterprise"
+              />
+            </div>
           </div>
 
-          <div class="input-wrapper">
-            <label for="name">Nome:</label>
-            <input required type="text" id="name" name="name" />
+          <div class="wrapper">
+            <div class="input-wrapper flex-1">
+              <label for="name">Nome</label>
+              <input
+                placeholder="Nome do solicitante"
+                required
+                type="text"
+                id="name"
+                name="name"
+              />
+            </div>
+
+            <div class="input-wrapper flex-1">
+              <label for="email">Email</label>
+              <input
+                placeholder="Ex: joao@empresa.com"
+                required
+                type="email"
+                id="email"
+                name="email"
+              />
+            </div>
           </div>
 
-          <div class="input-wrapper">
-            <label for="tel">Telefone:</label>
-            <input required type="tel" id="tel" name="tel" />
-          </div>
+          <div class="wrapper">
+            <div class="input-wrapper flex-1">
+              <label for="initial">Data de inicio</label>
+              <input required type="date" id="initial" name="initial" />
+            </div>
 
-          <div class="input-wrapper">
-            <label for="email">Email:</label>
-            <input required type="email" id="email" name="email" />
-          </div>
-
-          <div class="input-wrapper">
-            <label for="initial">Início:</label>
-            <input required type="date" id="initial" name="initial" />
+            <div class="input-wrapper flex-1">
+              <label for="tel">Celular</label>
+              <input
+                placeholder="ex: (85) 9 88888888"
+                required
+                type="tel"
+                id="tel"
+                name="tel"
+              />
+            </div>
           </div>
         </fieldset>
 
