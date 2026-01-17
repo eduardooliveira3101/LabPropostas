@@ -43,12 +43,16 @@ fieldset {
   border: none;
 }
 
-legend {
+form h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   text-align: center;
   font-size: 2em;
   color: #fffdfded;
   padding-bottom: 0.8em;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
 }
 
 .flex-1 {
@@ -166,7 +170,8 @@ input[type="date"] {
     flex: none;
   }
 
-  #service label {
+  #service label,
+  #state label {
     font-size: 0.8em;
   }
 }
