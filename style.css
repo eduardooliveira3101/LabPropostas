@@ -116,14 +116,16 @@ input[type="date"] {
   gap: 2em;
 }
 
-#service p {
+#service p,
+#state p {
   margin-top: 0.6em;
   margin-bottom: 1em;
   font-weight: bold;
   color: #ffff;
 }
 
-.check-wrapper {
+.check-wrapper,
+.radio-wrapper {
   display: flex;
   gap: 0.8em;
 
@@ -134,6 +136,12 @@ input[type="date"] {
   }
 
   input[type="checkbox"] {
+    height: 1em;
+    width: auto;
+    outline: none;
+  }
+
+  input[type="radio"] {
     height: 1em;
     width: auto;
     outline: none;
