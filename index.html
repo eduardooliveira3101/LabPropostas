@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -19,32 +19,60 @@
         <img class="logo" src="./assets/Logo-tecnol-neutra.gif" alt="" />
       </header>
 
-      <form action="">
+      <form id="proposalForm" action="">
         <fieldset id="client">
           <h1>Solicite sua proposta</h1>
+          <div
+            id="form-errors"
+            class="form-errors"
+            style="display: none"
+            role="alert"
+            aria-live="polite"
+          ></div>
+
+          <div class="input-wrapper">
+            <label for="name">Nome</label>
+            <input
+              placeholder="Nome do solicitante"
+              required
+              type="text"
+              id="name"
+              name="name"
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="enterprise">Empresa</label>
+            <input
+              placeholder="Digite o nome de sua empresa"
+              required
+              type="text"
+              id="enterprise"
+              name="enterprise"
+            />
+          </div>
 
           <div class="wrapper">
-            <div class="input-wrapper m-b flex-1">
-              <label for="enterprise">Empresa</label>
-              <input
-                placeholder="Digite o nome de sua empresa"
-                required
-                type="text"
-                id="enterprise"
-                name="enterprise"
-              />
+            <div class="input-wrapper flex-1">
+              <label for="initial">Previsão de início obra</label>
+              <input required type="date" id="initial" name="initial" />
+            </div>
+
+            <div class="input-wrapper flex-1">
+              <label for="finale">Previsão de término obra</label>
+              <input required type="date" id="finale" name="finale" />
             </div>
           </div>
 
           <div class="wrapper">
             <div class="input-wrapper flex-1">
-              <label for="name">Nome</label>
+              <label for="tel">Celular</label>
               <input
-                placeholder="Nome do solicitante"
+                placeholder="ex: (85) 9 88888888"
                 required
-                type="text"
-                id="name"
-                name="name"
+                type="tel"
+                id="tel"
+                name="tel"
               />
             </div>
 
@@ -56,24 +84,6 @@
                 type="email"
                 id="email"
                 name="email"
-              />
-            </div>
-          </div>
-
-          <div class="wrapper">
-            <div class="input-wrapper flex-1">
-              <label for="initial">Data de inicio</label>
-              <input required type="date" id="initial" name="initial" />
-            </div>
-
-            <div class="input-wrapper flex-1">
-              <label for="tel">Celular</label>
-              <input
-                placeholder="ex: (85) 9 88888888"
-                required
-                type="tel"
-                id="tel"
-                name="tel"
               />
             </div>
           </div>
@@ -149,6 +159,9 @@
             />
             <label for="bloco-piso">Bloco e Piso de Concreto</label>
           </div>
+
+          <p>Explique sua necessidade:</p>
+          <textarea name="esp_servico" id="esp_servico"></textarea>
         </fieldset>
 
         <fieldset id="state">
@@ -202,12 +215,20 @@
             />
             <label for="RN">Rio Grande do Norte</label>
           </div>
+          <div class="input-wrapper" id="city-container">
+            <label for="city">Cidade</label>
+            <select id="city" name="city" required>
+              <option value="">Selecione uma cidade</option>
+            </select>
+            <button type="button" id="change-state-btn">Alterar estado</button>
+          </div>
         </fieldset>
 
         <div class="input-wrapper">
           <input type="submit" value="Enviar" />
         </div>
       </form>
+      <script src="script.js"></script>
     </div>
   </body>
 </html>

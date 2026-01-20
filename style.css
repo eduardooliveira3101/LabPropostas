@@ -32,7 +32,6 @@ form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  border: 1px solid red;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -72,6 +71,22 @@ label {
   width: 100%;
 }
 
+.check-wrapper label,
+.radio-wrapper label {
+  font-size: 0.9em;
+}
+
+select {
+  outline: none;
+  border-radius: 0.3em;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc; /* ou a cor que você quiser */
+}
+
 input {
   height: 3em;
   border: 1px solid #f8eded44;
@@ -83,12 +98,13 @@ input {
   font-size: 1em;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: 1px solid #f9912f;
   border: none;
 }
 
-.input-wrapper + .input-wrapper {
+.input-wrapper {
   margin-bottom: 1em;
 }
 
@@ -111,10 +127,6 @@ input::placeholder {
   color: #ffffff52;
 }
 
-input[type="date"] {
-  height: 3.5em;
-}
-
 .wrapper {
   display: flex;
   gap: 2em;
@@ -123,9 +135,17 @@ input[type="date"] {
 #service p,
 #state p {
   margin-top: 0.6em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   font-weight: bold;
   color: #ffff;
+}
+
+#service p:first-child {
+  margin-top: 0em;
+}
+
+input[type="date"] {
+  width: 100%;
 }
 
 .check-wrapper,
@@ -152,6 +172,40 @@ input[type="date"] {
   }
 }
 
+textarea {
+  width: 100%;
+  height: 20em;
+  padding: 0.5em;
+  font-size: 1.2em;
+  background-color: transparent;
+  color: white;
+  resize: none;
+  border-radius: 0.3em;
+  border: 1px solid #f8eded44;
+}
+
+.check-wrapper + label {
+  margin-top: 0.5em;
+}
+
+#city {
+  height: 3em;
+  background-color: transparent;
+  color: white;
+  padding: 0.7em;
+  font-size: 1em;
+}
+
+select option {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+select option::picker {
+  outline: none;
+  border: none;
+}
+
 @media (max-width: 35.93em) {
   form {
     border: none;
@@ -163,7 +217,6 @@ input[type="date"] {
 
   .wrapper {
     flex-direction: column;
-    gap: 1em;
   }
 
   .flex-1 {
@@ -174,4 +227,50 @@ input[type="date"] {
   #state label {
     font-size: 0.8em;
   }
+
+  .wrapper {
+    display: flex;
+    gap: 0em;
+  }
+}
+
+.radio-wrapper.disabled {
+  opacity: 0.45;
+}
+
+#change-state-btn {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  padding: 0.4em 0.6em;
+  border-radius: 0.3em;
+  cursor: pointer;
+  display: none;
+  margin-top: 1em;
+}
+
+#change-state-btn:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+#city-container {
+  margin-top: 0.7rem;
+}
+
+.form-errors {
+  background: rgba(0, 0, 0, 0.35);
+  border-left: 4px solid #ffcc00;
+  color: #fff;
+  padding: 0.8em 1em;
+  margin-bottom: 1em;
+  border-radius: 6px;
+}
+
+.form-errors ul {
+  list-style: disc;
+  padding-left: 1.2em;
+}
+
+.form-errors li {
+  margin-bottom: 0.3em;
 }
