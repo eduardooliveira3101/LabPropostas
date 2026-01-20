@@ -127,6 +127,10 @@ input::placeholder {
   color: #ffffff52;
 }
 
+textarea::placeholder {
+  color: #ffffff52;
+}
+
 .wrapper {
   display: flex;
   gap: 2em;
@@ -175,7 +179,7 @@ input[type="date"] {
 textarea {
   width: 100%;
   height: 20em;
-  padding: 0.5em;
+  padding: 0.9em;
   font-size: 1.2em;
   background-color: transparent;
   color: white;
