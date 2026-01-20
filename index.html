@@ -19,9 +19,11 @@
         <img class="logo" src="./assets/Logo-tecnol-neutra.gif" alt="" />
       </header>
 
+      <h1>Solicite sua proposta</h1>
+
       <form id="proposalForm" action="">
         <fieldset id="client">
-          <h1>Solicite sua proposta</h1>
+          <h2>Informações do cliente</h2>
           <div
             id="form-errors"
             class="form-errors"
@@ -54,12 +56,12 @@
 
           <div class="wrapper">
             <div class="input-wrapper flex-1">
-              <label for="initial">Previsão de início obra</label>
+              <label for="initial">Previsão de início da obra</label>
               <input required type="date" id="initial" name="initial" />
             </div>
 
             <div class="input-wrapper flex-1">
-              <label for="finale">Previsão de término obra</label>
+              <label for="finale">Previsão de término da obra</label>
               <input required type="date" id="finale" name="finale" />
             </div>
           </div>
@@ -90,7 +92,8 @@
         </fieldset>
 
         <fieldset id="service">
-          <p>Tipo de serviço:</p>
+          <h2>Ensaios</h2>
+          <p>Quais são os tipos de serviço?</p>
           <div class="check-wrapper">
             <input type="checkbox" name="servico" value="PCE" id="PCE" />
             <label for="PCE">Prova de Carga Estática em Estaca (PCE)</label>
@@ -169,7 +172,8 @@
         </fieldset>
 
         <fieldset id="state">
-          <p>Onde o serviço será realizado:</p>
+          <h2>Localização</h2>
+          <p>Onde o serviço será realizado?</p>
           <div class="radio-wrapper">
             <input type="radio" id="BA" name="state" value="bahia" />
             <label for="BA">Bahia</label>
