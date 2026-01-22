@@ -36,7 +36,6 @@ form {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 2em;
-  background-color:;
 }
 
 fieldset {
@@ -126,11 +125,16 @@ input[type="submit"]:hover {
 }
 
 input::placeholder {
-  color: #ffffff52;
+  color: #00000052;
 }
 
 textarea::placeholder {
   color: #ffffff52;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.7) brightness(1);
+  cursor: pointer;
 }
 
 .wrapper {
@@ -225,6 +229,10 @@ textarea {
 select option {
   background-color: #ee7e14;
   color: #fff;
+}
+
+.address {
+  margin-bottom: 1.5em;
 }
 
 select option::picker {

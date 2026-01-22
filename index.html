@@ -33,9 +33,9 @@
           ></div>
 
           <div class="input-wrapper">
-            <label for="name">Nome</label>
+            <label for="name">Nome do solicitante</label>
             <input
-              placeholder="Nome do solicitante"
+              placeholder="Digite o nome do solicitante"
               required
               type="text"
               id="name"
@@ -43,8 +43,8 @@
             />
           </div>
 
-          <div class="input-wrapper">
-            <label for="enterprise">Empresa</label>
+          <div class="input-wrapper flex-1">
+            <label for="enterprise">Empresa solicitante</label>
             <input
               placeholder="Digite o nome de sua empresa"
               required
@@ -56,8 +56,38 @@
 
           <div class="wrapper">
             <div class="input-wrapper flex-1">
+              <label for="name">Empreendimento</label>
+              <input
+                placeholder="Digite o nome do empreendimento"
+                required
+                type="text"
+                id="name"
+                name="name"
+              />
+            </div>
+
+            <div class="input-wrapper flex-1">
+              <label for="enterprise">CNPJ</label>
+              <input
+                placeholder="Digite o CNPJ de sua empresa"
+                required
+                type="text"
+                id="cnpj"
+                name="cnpj"
+              />
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <div class="input-wrapper flex-1">
               <label for="initial">Previsão de início da obra</label>
-              <input required type="date" id="initial" name="initial" />
+              <input
+                placeholder="Data"
+                required
+                type="date"
+                id="initial"
+                name="initial"
+              />
             </div>
 
             <div class="input-wrapper flex-1">
@@ -70,7 +100,7 @@
             <div class="input-wrapper flex-1">
               <label for="tel">Celular</label>
               <input
-                placeholder="ex: (85) 9 88888888"
+                placeholder="ex: 85988888888"
                 required
                 type="tel"
                 id="tel"
@@ -173,7 +203,19 @@
 
         <fieldset id="state">
           <h2>Localização</h2>
-          <p>Onde o serviço será realizado?</p>
+
+          <div class="input-wrapper address">
+            <label for="name">Endereço da obra</label>
+            <input
+              placeholder="Digite o Endereço da obra"
+              required
+              type="text"
+              id="name"
+              name="name"
+            />
+          </div>
+
+          <p>Selecione o estado do empreendimento</p>
           <div class="radio-wrapper">
             <input type="radio" id="BA" name="state" value="bahia" />
             <label for="BA">Bahia</label>
