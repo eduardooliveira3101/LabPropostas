@@ -48,19 +48,19 @@ Sistema web desenvolvido para **solicitação de propostas técnicas**, com gera
 
 ---
 
-## 🖥️ Imagens do projeto
+## 🖥️ Screenshots
 
-### Formulário – Informações do Cliente - Desktop
+## Formulário – Informações do Cliente
 
 ![Informações do Cliente](assets/desktop01.png)
 ![Informações do Cliente](assets/desktop02.png)
 
-### Formulário – Informações do Cliente - Mobile
+## Formulário – Informações do Cliente
 
 ![Informações do Cliente](assets/mobile01.png)
 ![Informações do Cliente](assets/mobile02.png)
 
-### Confirmação de Envio
+## Confirmação de Envio
 
 ![Proposta Enviada](assets/confirmaçao.png)
 
