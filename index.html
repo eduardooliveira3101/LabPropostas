@@ -21,7 +21,7 @@
 
       <h1>Solicite sua proposta</h1>
 
-      <form id="proposalForm" action="">
+      <form id="proposalForm" action="processar-form.php" method="POST">
         <fieldset id="client">
           <h2>Informações do cliente</h2>
           <div
@@ -33,13 +33,13 @@
           ></div>
 
           <div class="input-wrapper">
-            <label for="name">Nome do solicitante</label>
+            <label for="client_name">Nome do solicitante</label>
             <input
               placeholder="Digite o nome do solicitante"
               required
               type="text"
-              id="name"
-              name="name"
+              id="client_name"
+              name="client_name"
             />
           </div>
 
@@ -48,6 +48,7 @@
             <input
               placeholder="Digite o nome de sua empresa"
               required
+              maxlength="100"
               type="text"
               id="enterprise"
               name="enterprise"
@@ -56,24 +57,13 @@
 
           <div class="wrapper">
             <div class="input-wrapper flex-1">
-              <label for="name">Empreendimento</label>
+              <label for="project_name">Nome do empreendimento</label>
               <input
                 placeholder="Digite o nome do empreendimento"
                 required
                 type="text"
-                id="name"
-                name="name"
-              />
-            </div>
-
-            <div class="input-wrapper flex-1">
-              <label for="enterprise">CNPJ</label>
-              <input
-                placeholder="Digite o CNPJ de sua empresa"
-                required
-                type="text"
-                id="cnpj"
-                name="cnpj"
+                id="project_name"
+                name="project_name"
               />
             </div>
           </div>
@@ -121,19 +111,35 @@
           </div>
         </fieldset>
 
+        <fieldset id="state">
+          <h2>Localização</h2>
+
+          <div class="input-wrapper address">
+            <label for="address">Endereço da obra</label>
+            <input
+              placeholder="Digite o endereço completo do empreendimento"
+              required
+              type="text"
+              id="address"
+              name="address"
+            />
+          </div>
+        </fieldset>
+
         <fieldset id="service">
           <h2>Ensaios</h2>
           <p>Quais são os tipos de serviço?</p>
+
           <div class="check-wrapper">
-            <input type="checkbox" name="servico" value="PCE" id="PCE" />
+            <input type="checkbox" name="servico[]" value="PCE" id="PCE" />
             <label for="PCE">Prova de Carga Estática em Estaca (PCE)</label>
           </div>
 
           <div class="check-wrapper">
             <input
               type="checkbox"
-              name="servico"
-              value="desempenho"
+              name="servico[]"
+              value="Ensaio de Desempenho"
               id="desempenho"
             />
             <label for="desempenho">Ensaios de Desempenho</label>
@@ -142,8 +148,8 @@
           <div class="check-wrapper">
             <input
               type="checkbox"
-              name="servico"
-              value="geotecnia"
+              name="servico[]"
+              value="Estudos Geotecnicos"
               id="geotecnia"
             />
             <label for="geotecnia">Estudos Geotécnicos</label>
@@ -152,8 +158,8 @@
           <div class="check-wrapper">
             <input
               type="checkbox"
-              name="servico"
-              value="concreto-argamassa"
+              name="servico[]"
+              value="Controle Tecnologico de Concreto e Argamassa"
               id="concreto-argamassa"
             />
             <label for="concreto-argamassa"
@@ -164,8 +170,8 @@
           <div class="check-wrapper">
             <input
               type="checkbox"
-              name="servico"
-              value="controle-tech-solo"
+              name="servico[]"
+              value="Controle Tecnologico de Solo"
               id="controle-tech-solo"
             />
             <label for="controle-tech-solo">Controle Tecnológico de Solo</label>
@@ -174,8 +180,8 @@
           <div class="check-wrapper">
             <input
               type="checkbox"
-              name="servico"
-              value="controle-tech-astalto"
+              name="servico[]"
+              value="Controle Tecnologico de Asfalto"
               id="controle-tech-asfalto"
             />
             <label for="controle-tech-asfalto"
@@ -186,11 +192,13 @@
           <div class="check-wrapper">
             <input
               type="checkbox"
-              name="servico"
-              value="bloco-piso"
+              name="servico[]"
+              value="Controle Tecnologico de Bloco e Piso de Concreto"
               id="bloco-piso"
             />
-            <label for="bloco-piso">Bloco e Piso de Concreto</label>
+            <label for="bloco-piso"
+              >Controle Tecnológico de Bloco e Piso de Concreto</label
+            >
           </div>
 
           <p>Explique sua necessidade:</p>
@@ -199,79 +207,6 @@
             name="esp_servico"
             id="esp_servico"
           ></textarea>
-        </fieldset>
-
-        <fieldset id="state">
-          <h2>Localização</h2>
-
-          <div class="input-wrapper address">
-            <label for="name">Endereço da obra</label>
-            <input
-              placeholder="Digite o Endereço da obra"
-              required
-              type="text"
-              id="name"
-              name="name"
-            />
-          </div>
-
-          <p>Selecione o estado do empreendimento</p>
-          <div class="radio-wrapper">
-            <input type="radio" id="BA" name="state" value="bahia" />
-            <label for="BA">Bahia</label>
-          </div>
-
-          <div class="radio-wrapper">
-            <input type="radio" id="CE" name="state" value="ceara" checked />
-            <label for="CE">Ceará</label>
-          </div>
-
-          <div class="radio-wrapper">
-            <input type="radio" id="MA" name="state" value="maranhao" />
-            <label for="MA">Maranhão</label>
-          </div>
-
-          <div class="radio-wrapper">
-            <input type="radio" id="PI" name="state" value="piaui" />
-            <label for="PI">Piaui</label>
-          </div>
-
-          <div class="radio-wrapper">
-            <input type="radio" id="PE" name="state" value="pernambuco" />
-            <label for="PE">Pernambuco</label>
-          </div>
-
-          <div class="radio-wrapper">
-            <input type="radio" id="AL" name="state" value="alagoas" />
-            <label for="AL">Alagoas</label>
-          </div>
-
-          <div class="radio-wrapper">
-            <input type="radio" id="SE" name="state" value="sergipe" />
-            <label for="SE">Sergipe</label>
-          </div>
-
-          <div class="radio-wrapper">
-            <input type="radio" id="PB" name="state" value="paraiba" />
-            <label for="PB">Paraiba</label>
-          </div>
-
-          <div class="radio-wrapper">
-            <input
-              type="radio"
-              id="RN"
-              name="state"
-              value="rio-grande-do-norte"
-            />
-            <label for="RN">Rio Grande do Norte</label>
-          </div>
-          <div class="input-wrapper" id="city-container">
-            <label for="city">Cidade</label>
-            <select id="city" name="city" required>
-              <option value="">Selecione uma cidade</option>
-            </select>
-            <button type="button" id="change-state-btn">Alterar estado</button>
-          </div>
         </fieldset>
 
         <div class="input-wrapper">

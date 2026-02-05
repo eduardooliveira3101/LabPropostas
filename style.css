@@ -231,10 +231,6 @@ select option {
   color: #fff;
 }
 
-.address {
-  margin-bottom: 1.5em;
-}
-
 select option::picker {
   outline: none;
   border: none;
