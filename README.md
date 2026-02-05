@@ -6,7 +6,7 @@
 ![PHPMailer](https://img.shields.io/badge/PHPMailer-SMTP_Email-green)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 
-Sistema web desenvolvido para **solicitação de propostas técnicas**, com geração automática de **PDF** e envio por **e-mail via SMTP**, utilizado pela **TECNOL Tecnologia**.
+> Sistema web desenvolvido para **solicitação de propostas técnicas**, com geração automática de **PDF** e envio por **e-mail via SMTP**, utilizado pela **TECNOL Tecnologia**.
 
 ---
 
@@ -53,16 +53,22 @@ Sistema web desenvolvido para **solicitação de propostas técnicas**, com gera
 ## Formulário – Informações do Cliente
 
 ![Informações do Cliente](assets/desktop01.png)
+
+<br/>
+
 ![Informações do Cliente](assets/desktop02.png)
 
-## Formulário – Informações do Cliente
+## Formulário – Informações do Cliente - Mobile
 
 ![Informações do Cliente](assets/mobile01.png)
+
+<br/>
+
 ![Informações do Cliente](assets/mobile02.png)
 
 ## Confirmação de Envio
 
-![Proposta Enviada](assets/confirmaçao.png)
+![Proposta Enviada](assets/confirmacao.png)
 
 ---
 
@@ -75,5 +81,5 @@ Desenvolvido por **Carlos Eduardo**
 
 ## 📜 Licença
 
-Este projeto é de uso interno da TECNOL.
-Distribuição externa somente com autorização.
+> Este projeto é de uso interno da TECNOL.
+> Distribuição externa somente com autorização.
