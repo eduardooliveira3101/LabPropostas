@@ -1,3 +1,5 @@
+# Ignorar README de instalação local e arquivos de configuração sensíveis
+config-email.php
 # Ignore common files not needed in the repo
 
 # Composer / PHP
