@@ -76,10 +76,3 @@
 
 Desenvolvido por **Carlos Eduardo**
 💼 TECNOL Tecnologia
-
----
-
-## 📜 Licença
-
-> Este projeto é de uso interno da TECNOL.
-> Distribuição externa somente com autorização.
